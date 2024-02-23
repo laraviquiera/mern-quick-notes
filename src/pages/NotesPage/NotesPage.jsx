@@ -1,6 +1,7 @@
 import { getNotes, addNote } from '../../utilities/notes-api';
 import { useState, useEffect } from 'react';
 import NewNoteForm from '../../components/NewNoteForm/NewNoteForm';
+import './NotesPage.css'
 
 export default function NotesPage() {
   const [notes, setNotes] = useState([]);
@@ -14,7 +15,6 @@ export default function NotesPage() {
   }, []);
 
   const handleAddNote = async (newNote) => {
-    console.log(newNote)
     try {
       const addedNote = await addNote(newNote);
       setNotes([...notes, addedNote]);
@@ -25,14 +25,14 @@ export default function NotesPage() {
 
   return (
     <>
-      <h1>All Notes</h1>
+      <h1>All Notes ✍🏼 </h1>
       <NewNoteForm handleAddNote={handleAddNote} />
       {notes.length === 0 && <p>No Notes Yet!</p>}
       {notes.length > 0 && (
          <ul>
          {notes.map((note) => (
-           <li key={note._id}>
-             {note.text} - {new Date(note.createdAt).toLocaleString()}
+           <li className='list' key={note._id}>
+             ⭐ {note.text} - {new Date(note.createdAt).toLocaleString()}
            </li>
          ))}
        </ul>

@@ -5,7 +5,7 @@
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
   --tan-4: #D3C1AE;
-  --orange: #F67F00;
+  --orange: #fefefe;
   --text-light: #968c84;
   --text-dark: #615954;
 }
@@ -21,7 +21,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background: url('https://images.unsplash.com/photo-1551376347-075b0121a65b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
   padding: 2vmin;
   height: 100vh;
 }
@@ -144,7 +145,8 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: #83cddd;
+  color: white;
 }
 
 button[type="submit"] {

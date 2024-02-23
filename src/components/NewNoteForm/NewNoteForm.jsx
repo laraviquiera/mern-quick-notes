@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './NewNoteForm.css'
 
 export default function NewNoteForm({ handleAddNote }) {
     const [newNote, setNewNote] = useState({ text: '' });
@@ -15,14 +16,16 @@ export default function NewNoteForm({ handleAddNote }) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="new-note" onSubmit={handleSubmit}>
             <input 
                 name="text"
                 value={newNote.text}
                 onChange={handleChange}
+                placeholder="add new note"
                 required
             />
-            <button type="submit">Add Note</button>
+            &nbsp;&nbsp;
+            <button type="submit" className="add-note">Add Note</button>
         </form>
     );
 }

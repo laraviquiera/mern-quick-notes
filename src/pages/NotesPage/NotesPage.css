@@ -1,0 +1,7 @@
+.list {
+    display: flex;
+    list-style-type: none;
+    text-align: left;
+    color: teal;
+    font-size: 1.5rem;
+}

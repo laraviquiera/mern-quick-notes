@@ -14,6 +14,7 @@ export default function NavBar({ user, setUser }) {
       <Link to="/notes">Notes</Link>
       &nbsp; | &nbsp;
       <Link to="/notes/new">Add New Note</Link>
+      &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
